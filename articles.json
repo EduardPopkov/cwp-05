@@ -1,0 +1,19 @@
+{ "Model":
+  [
+    {
+      "id": "int/string",
+      "title": "string",
+      "text": "string",
+      "date": "int",
+      "author": "string",
+      "comments": "array"
+    },
+    {
+      "id": "int/string",
+      "articleId": "int/string",
+      "text": "string",
+      "date": "int",
+      "author": "string"
+    }
+  ]
+}

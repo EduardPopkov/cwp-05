@@ -1,12 +1,15 @@
 const http = require('http');
+const fs = require('fs');
 
 const hostname = '127.0.0.1';
 const port = 3000;
 
 const server = http.createServer((req, resp) => {
-    resp.statusCode = 200;
-    resp.setHeader('Content-Type', 'text/plain');
-    resp.end('Hello');
+  let fromJSON = fs.readFileSync('./articles.json');
+  let text = JSON.parse(fromJSON);
+  console.log(text.Model[1]);
+
+  resp.end('hello');
 });
 
 server.listen(port, hostname, () => {
